@@ -31,4 +31,4 @@ jobs:
           context: ./userService
           file: ./userService/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/casino:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/user_service:latest

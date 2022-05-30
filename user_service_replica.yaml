@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: user
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: user
+      env: dev
+  template:
+    metadata: 
+      labels:
+        app: user
+        env: dev
+    spec:
+      containers:
+      - name: user-service
+        image: mataleao/user_service
+        ports: 
+        - containerPort: 3300
+        envFrom:
+          - secretRef:
+             name: user-secrets
+        

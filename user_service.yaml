@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cc_project-usernode
+  name: usernode
 spec:
   type: NodePort
   ports:
@@ -9,4 +9,4 @@ spec:
     targetPort: 8080
     nodePort: 30100
   selector:
-    app: cc_project
+    app: user

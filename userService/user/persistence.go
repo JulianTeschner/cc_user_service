@@ -21,9 +21,9 @@ func NewClient() {
 	serverAPIOptions := options.ServerAPI(options.ServerAPIVersion1)
 
 	if os.Getenv("MONGO_INITDB_ROOT_PORT") != "" {
-		url = fmt.Sprintf("mongodb://%s:%s@%s:%s", os.Getenv("MONGO_INITDB_ROOT_USERNAME"), os.Getenv("MONGO_INITDB_ROOT_PASSWORD"), os.Getenv("MONGO_INITDB_ROOT_HOST"), os.Getenv("MONGO_INITDB_ROOT_PORT"))
+		url = fmt.Sprintf("mongodb://%s:%s@%s:%d", "admin", "sUBj2oZ99bONNBcR", "ccuser.5orfj.mongodb.net", 27017)
 	} else {
-		url = fmt.Sprintf("mongodb+srv://%s:%s@%s", os.Getenv("MONGO_INITDB_ROOT_USERNAME"), os.Getenv("MONGO_INITDB_ROOT_PASSWORD"), os.Getenv("MONGO_INITDB_ROOT_HOST"))
+		url = fmt.Sprintf("mongodb://%s:%s@%s", "admin", "sUBj2oZ99bONNBcR", "ccuser.5orfj.mongodb.net")
 	}
 
 	clientOptions := options.Client().ApplyURI(url).SetServerAPIOptions(serverAPIOptions)

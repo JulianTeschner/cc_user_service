@@ -31,6 +31,10 @@ func main() {
 	if err != nil {
 		log.Println("No .env file found, using default values")
 	}
+	vars := os.Environ()
+	for _, v := range vars {
+		log.Println(v)
+	}
 
 	user.NewClient()
 	defer user.Client.Disconnect(ctx)

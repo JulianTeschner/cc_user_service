@@ -1,1 +1,1 @@
-FROM mataleao/casino:latest
+FROM mataleao/user_service:latest

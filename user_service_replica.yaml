@@ -9,50 +9,39 @@ spec:
       app: user
       env: dev
   template:
-    metadata: 
+    metadata:
       labels:
         app: user
         env: dev
     spec:
       containers:
-      - name: user-service
-        image: mataleao/user_service
-        ports: 
-        - containerPort: 3300
-        env:
-          - name: SECRET_AUTH0_DOMAIN
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: AUTH0_DOMAIN
-          - name: SECRET_AUTH0_AUDIENCE
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: AUTH0_AUDIENCE
-          - name: SECRET_MONGO_INITDB_ROOT_DATABASE
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: MONGO_INITDB_ROOT_DATABASE
-          - name: SECRET_MONGO_INITDB_TEST_DATABASE
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: MONGO_INITDB_TEST_DATABASE
-          - name: SECRET_MONGO_INITDB_ROOT_HOST
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: MONGO_INITDB_ROOT_HOST
-          - name: SECRET_MONGO_INITDB_ROOT_USERNAME
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: MONGO_INITDB_ROOT_USERNAME
-          - name: SECRET_MONGO_INITDB_ROOT_PASSWORD
-            valueFrom:
-              secretKeyRef: 
-                name: user-secrets
-                key: MONGO_INITDB_ROOT_PASSWORD
-        
+        - name: user-service
+          image: mataleao/user_service
+          ports:
+            - containerPort: 3300
+          env:
+            - name: SECRET_MONGO_INITDB_ROOT_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: user-secrets
+                  key: MONGO_INITDB_ROOT_DATABASE
+            - name: SECRET_MONGO_INITDB_TEST_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: user-secrets
+                  key: MONGO_INITDB_TEST_DATABASE
+            - name: SECRET_MONGO_INITDB_ROOT_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: user-secrets
+                  key: MONGO_INITDB_ROOT_HOST
+            - name: SECRET_MONGO_INITDB_ROOT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: user-secrets
+                  key: MONGO_INITDB_ROOT_USERNAME
+            - name: SECRET_MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: user-secrets
+                  key: MONGO_INITDB_ROOT_PASSWORD

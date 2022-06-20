@@ -2,6 +2,7 @@ package user
 
 import (
 	// "io/ioutil"
+	"io/ioutil"
 	"log"
 	"os"
 	"testing"

@@ -1,9 +1,8 @@
-module github.com/JulianTeschner/cloudcomputing/service/userService
+module github.com/JulianTeschner/cc_user_service
 
 go 1.17
 
 require (
-	github.com/auth0/go-jwt-middleware/v2 v2.0.1
 	github.com/gin-gonic/gin v1.7.7
 	github.com/gwatts/gin-adapter v1.0.0
 	github.com/joho/godotenv v1.4.0
@@ -20,6 +19,7 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/protobuf v1.3.3 // indirect
 	github.com/golang/snappy v0.0.1 // indirect
+	github.com/google/go-cmp v0.5.7 // indirect
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/leodido/go-urn v1.2.0 // indirect
@@ -37,7 +37,6 @@ require (
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 	golang.org/x/sys v0.0.0-20220513210249-45d2b4557a2a // indirect
 	golang.org/x/text v0.3.6 // indirect
-	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/yaml.v2 v2.2.8 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )

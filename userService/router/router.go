@@ -3,8 +3,7 @@ package router
 import (
 	"log"
 
-	_ "github.com/JulianTeschner/cloudcomputing/service/userService/middleware"
-	"github.com/JulianTeschner/cloudcomputing/service/userService/user"
+	"github.com/JulianTeschner/cc_user_service/user"
 	"github.com/gin-gonic/gin"
 
 	_ "github.com/gwatts/gin-adapter"

@@ -2,7 +2,7 @@ package user
 
 import (
 	"encoding/json"
-	"github.com/JulianTeschner/cloudcomputing/service/userService/models"
+	"github.com/JulianTeschner/cc_user_service/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"log"

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/JulianTeschner/cloudcomputing/service/userService/models"
+	"github.com/JulianTeschner/cc_user_service/models"
 	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -21,7 +21,7 @@ func TestMain(m *testing.M) {
 		log.Println("No .env file found, using default values")
 	}
 
-	// log.SetOutput(ioutil.Discard)
+	log.SetOutput(ioutil.Discard)
 	NewClient()
 	teardownHandlers := setupHandlersTest()
 	// Run the tests
